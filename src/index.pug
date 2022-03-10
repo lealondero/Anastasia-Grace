@@ -1,0 +1,51 @@
+- var datas = { 'Indifférence': 'Ana est différente, elle se sent incomprise et rejetée. Ce qui la mène à l\'indifférence envers les autres.', 'Polyamour': 'Ana n\'était encore jamais tombé amoureuse, elle ne pensait même pas que cela pourrait lui arriver un jour. Alors c\'est avec effarement qu\'elle développe des sentiments pour deux garçons.', 'Féminisme': 'Après de multiples mauvaises expériences avec les hommes, Ana commence à s\'intéresser au féminisme.', 'Orientation sexuelle': 'Ana rejoint une association féministe et fait de belles rencontres. Elle en vient à remettre en cause son orientation sexuelle.','Délivrance' : 'Enfin, Ana en a fini de jouer un rôle. Elle se libère d\'un poids énorme et s\'accepte telle qu\'elle est.'}
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./style.scss")
+        title Anastasia Grace
+    body 
+        section.header
+            h1.header__title Anastasia Grace 
+            h2.header__subtitle Un livre écrit par SLEEPY-DREAMER
+        
+        section.main 
+            .book
+              .book__front
+                .cover
+                  p.book__author SLEEPY-DREAMER 
+                  p.book__name Anastasia Grace 
+              .book__left-side
+                h2 <span>SLEEPY-DREAMER</span> <span>Anastasia Grace</span>
+            .book__description
+                p Plongez dans l'univers d'Anastasia Grace
+                p Une jeune femme en quête de son identité
+                p Qui devra surmonter de nombreuses difficultés 
+                p Afin d'obtenir la vérité
+                p Et de s'affirmer telle qu'elle est.
+
+        section.themes
+            p.themes__catchphrase <span>Anastasia Grace</span>, le récit exaltant de la vie mouvementée d'une jeune femme à travers diverses thématiques. 
+            div.themes__scene
+              .scene__left-zone
+                ul.list
+                  each val, index in datas
+                    li.list__item
+                        if index == "Indifférence"
+                          input(type="radio", id='radio_' + val name="basic_carousel" value=val checked)
+                        else
+                          input(type="radio", id='radio_' + val name="basic_carousel" value=val) 
+
+                        label(for='radio_' + val, class='label_' + index)
+                          | #{index}
+                        div(class='content content_' + index)
+                          h2
+                            | #{index}
+                          p
+                            | #{val}
+              .scene__middle-border
+              .scene__right-zone
