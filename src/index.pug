@@ -10,13 +10,14 @@ html(lang="en")
         title Anastasia Grace
     body 
         section.header
+            <img src="./assets/images/book-small.webp", class="header__background", srcset="./assets/images/book-small.webp 400w, ./assets/images/book-med.webp 800w, ./assets/images/book-large.webp 1843w"/>
             h1.header__title Anastasia Grace 
             h2.header__subtitle Un livre écrit par SLEEPY-DREAMER
         
         section.novel 
             .book
               .book__front
-                .cover
+                .book__cover
                   p.book__author SLEEPY-DREAMER 
                   p.book__name Anastasia Grace 
               .book__left-side
@@ -30,7 +31,7 @@ html(lang="en")
 
         section.themes
             p.themes__catchphrase <span>Anastasia Grace</span>, le récit exaltant de la vie mouvementée d'une jeune femme à travers diverses thématiques. 
-            div.themes__scene
+            div.scene
               .scene__left-zone
                 ul.list
                   each val, index in datas
@@ -50,7 +51,7 @@ html(lang="en")
               .scene__middle-border
               .scene__right-zone
 
-        section.more-novels  
+        section.more-novels
           h2 Découvrir plus de romans écrits par cette auteure
           .cards
             div(class='card open')

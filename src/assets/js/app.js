@@ -1,5 +1,4 @@
 let old = document.querySelector(".card:first-of-type");
-console.log(old);
 document.querySelectorAll(".card").forEach((card) => {
   card.addEventListener("click", () => {
     console.log("ok");

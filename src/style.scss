@@ -102,9 +102,15 @@ section {
   padding-top: 100px;
   justify-content: flex-start;
   align-items: center;
-  background-image: url(./assets/images/book.jpg);
-  background-position: bottom;
-  background-size: cover;
+
+  .header__background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+  }
 
   .header__title {
     font-size: 3.125rem;
@@ -209,7 +215,7 @@ section {
     width: 1px;
   }
 
-  .cover {
+  .book__cover {
     background: linear-gradient(45deg, #dad5dc 0%, #f2ebf4 100%);
     background-image: url("./assets/images/anastasia.webp");
     background-size: cover;
@@ -236,7 +242,7 @@ section {
     }
   }
 
-  .cover:after {
+  .book__cover:after {
     content: "";
     position: absolute;
     top: 0;
@@ -322,7 +328,7 @@ section {
 
 // Scene
 
-.themes__scene {
+.scene {
   display: flex;
   align-items: center;
   justify-content: left;
