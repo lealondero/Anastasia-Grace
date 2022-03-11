@@ -1,0 +1,106 @@
+/* Fonts */
+
+@font-face {
+  font-family: "AwakeTheBeauty";
+  src: url(./../fonts/AwakeTheBeauty.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Eurofurence";
+  src: url(./../fonts/eurofurence/eurof55.ttf) format("truetype");
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$menu-width: 30%;
+$scene-width: 90%;
+$scene-height: 500px;
+
+$sections: indifference, polyamour, feminisme, orientation, delivrance;
+
+$colors: (
+  white: #fff,
+  gray: #eee,
+  red: #92030a,
+  beige: #dec1a2,
+);
+
+@function get-color($color-name) {
+  @if map-has-key($colors, $color-name) {
+    @return map-get($colors, $color-name);
+  } @else {
+    @warn "This color key doesn't exist.";
+  }
+}
+
+@keyframes slidein {
+  0% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background: #eee;
+  font-family: "Eurofurence", sans-serif;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1.2rem;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header,
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+
+  h1,
+  span {
+    font-family: "AwakeTheBeauty";
+  }
+
+  h1,
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@import url(./header.scss);
+
+@import url(./novel.scss);
+
+@import url(./themes.scss);
+
+@import url(./novels.scss);
