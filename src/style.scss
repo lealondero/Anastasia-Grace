@@ -19,12 +19,6 @@ img {
   box-sizing: border-box;
 }
 
-html {
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-}
-
 $menu-width: 30%;
 $scene-width: 90%;
 $scene-height: 500px;
@@ -84,6 +78,9 @@ body {
   font-size: 1.125rem;
   height: 100vh;
   overflow-x: hidden;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
 }
 
 header,
