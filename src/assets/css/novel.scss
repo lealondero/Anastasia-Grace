@@ -30,8 +30,8 @@
 
   @media (max-width: 400px) {
     .book {
-      width: 300px;
-      height: 450px;
+      width: 290px;
+      height: 400px;
     }
   }
 
@@ -71,11 +71,12 @@
 
     @media (max-width: 400px) {
       div {
-        width: 300px;
-        height: 450px;
+        width: 290px;
+        height: 400px;
       }
     }
   }
+
   .book__front:after {
     content: "";
     position: absolute;
@@ -126,7 +127,7 @@
   h2 {
     width: 500px;
     height: 40px;
-    color: #2b2b2b;
+    color: white;
     font-size: 15px;
     line-height: 40px;
     padding-right: 10px;
@@ -143,13 +144,13 @@
     width: 40px;
     left: -20px;
     height: 550px;
-    background-color: rgba(232, 229, 234);
+    background-color: #252530;
     -webkit-transform: rotate3d(0, 1, 0, -90deg);
     -moz-transform: rotate3d(0, 1, 0, -90deg);
     transform: rotate3d(0, 1, 0, -90deg);
 
     @media (max-width: 400px) {
-      height: 450px;
+      height: 400px;
     }
 
     span {
@@ -168,15 +169,53 @@
       }
     }
   }
+
   .book__description {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     p {
-      line-height: 2rem;
+      line-height: 1.5rem;
+      text-align: center;
 
       @media (min-width: 950px) {
-        padding: 30px;
+        padding: 20px;
       }
+    }
+  }
+
+  .book__button {
+    margin-top: 5%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 250px;
+    padding: 12px 23px;
+    border: 1px solid #92030a;
+    border-radius: 8px;
+    background: #92030a;
+    -webkit-box-shadow: #000000 3px 4px 9px 2px;
+    -moz-box-shadow: #000000 3px 4px 9px 2px;
+    box-shadow: #000000 3px 4px 9px 2px;
+    text-shadow: #380407 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border: 1px solid white;
+      background: #af040c;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    svg {
+      width: 30px;
+      fill: white;
     }
   }
 }

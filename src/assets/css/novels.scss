@@ -22,7 +22,8 @@
   height: 0px;
   overflow: hidden;
   width: 150px;
-  font-size: 12px;
+  font-size: 1rem;
+  line-height: 1.1rem;
   font-weight: normal;
   @media (min-width: 800px) {
     width: 400px;
@@ -38,6 +39,13 @@
   display: flex;
   flex-flow: row;
   align-items: center;
+
+  .book {
+    transition: all 0.5s;
+    width: 120px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
 
   &.open {
     padding: 10px;
@@ -65,13 +73,6 @@
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   height: 90px;
-}
-
-.book {
-  transition: all 0.5s;
-  width: 120px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
 }
 
 .novels__info {
