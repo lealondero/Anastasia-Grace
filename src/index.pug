@@ -6,8 +6,9 @@ html(lang="fr")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(description="Promotion du livre intitulé Anastasia Grace, écrit par SLEEPY-DREAMER")
         link(rel="stylesheet", href="./assets/css/style.scss")
-        title Anastasia Grace
+        title Anastasia Grace, un roman pour ado écrit par SLEEPY-DREAMER
     body 
         section.header
             img(src="./assets/images/book-small.webp", class="header__background", srcset="./assets/images/book-small.webp 400w, ./assets/images/book-med.webp 800w, ./assets/images/book-large.webp 1843w" alt="Image de fond : livre")
@@ -57,19 +58,19 @@ html(lang="fr")
           h2 Découvrir plus de romans écrits par cette auteure
           .novels__cards
             div(class='novels__card open')
-              img(src='./assets/images/quand-tout-a-change-cover.jpg', class='book', alt="Couverture du livre : Quand tout a changé")
+              img(src='./assets/images/quand-tout-a-change-cover.jpg', loading="lazy", class='book', alt="Couverture du livre : Quand tout a changé")
               .novels__info
                 .novels__title Quand tout a changé
                 div(class='hidden bottom novels__summary') 
                   p Kiera est une jeune fille de quinze ans avec une vie monotone et une routine qu'elle connaît par cœur. Mais ça, c'était avant qu'elle n'entre au lycée. Entre amitié, amour, joie, jalousie, tristesse et trahison, cette année est loin d'être ce que qu'elle avait pu imaginer !
             div(class='novels__card')
-              img(src='./assets/images/inconnu-cover.jpg', alt="Couverture du livre : L'(in)connu", class='book')
+              img(src='./assets/images/inconnu-cover.jpg', loading="lazy", alt="Couverture du livre : L'(in)connu", class='book')
               .novels__info
                 .novels__title L'(in)connu
                 div(class='hidden bottom novels__summary') 
                   p Ily reçoit un message d'un certain Jake, pensant qu'il s'est fait avoir et qu'une fille lui a donné un faux numéro, elle entre dans son jeu. Mais si cet inconnu n'était pas si inconnu que ça ?
             div(class='novels__card')
-              img(src='./assets/images/parallelworld-cover.jpg', alt="Couverture du livre : Parallel World", class='book')
+              img(src='./assets/images/parallelworld-cover.jpg', loading="lazy", alt="Couverture du livre : Parallel World", class='book')
               .novels__info
                 .novels__title Parallel World
                 div(class='hidden bottom novels__summary') 
